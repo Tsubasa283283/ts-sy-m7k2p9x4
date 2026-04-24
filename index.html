@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ふたりの2年 — さやちゃんへ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-opening">
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <nav class="progress-nav" aria-label="スライドナビゲーション">
+    <div class="progress-dots" id="progressDots"></div>
+  </nav>
+
+  <button class="bgm-btn" id="bgmBtn" aria-label="BGMを再生">♪</button>
+
+  <button class="nav-arrow nav-arrow--prev" id="prevBtn" aria-label="前へ">&#8592;</button>
+  <button class="nav-arrow nav-arrow--next" id="nextBtn" aria-label="次へ">&#8594;</button>
+
+  <main class="slides-container" id="slidesContainer">
+
+    <!-- ===== SLIDE 0: Opening ===== -->
+    <section class="slide slide--opening is-active" data-slide="0" data-theme="opening">
+      <div class="opening__inner">
+        <p class="opening__prelude anim-el" data-delay="0">2024 — 2026</p>
+        <h1 class="opening__title anim-el" data-delay="1">
+          僕たちの2年を、<br>少しだけ旅しませんか。
+        </h1>
+        <p class="opening__sub anim-el" data-delay="2">a journey through our story</p>
+        <button class="opening__cta anim-el" data-delay="3" id="startBtn">旅を始める</button>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 1: Chapter I ===== -->
+    <section class="slide slide--chapter" data-slide="1" data-theme="ch1">
+      <div class="chapter__inner">
+        <span class="chapter__number anim-el" data-delay="0">Chapter I</span>
+        <h2 class="chapter__title anim-el" data-delay="1">はじまりのころ</h2>
+        <p class="chapter__sub anim-el" data-delay="2">the beginning</p>
+        <div class="chapter__rule anim-el" data-delay="3"></div>
+        <p class="chapter__range anim-el" data-delay="4">2024年 春 — 夏</p>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 2: Memory 01 ===== -->
+    <section class="slide slide--memory" data-slide="2" data-theme="ch1">
+      <div class="memory__photo" style="--photo-src: url('photos/memory-01.jpg')">
+        <div class="memory__photo-placeholder">
+          <span class="memory__photo-hint">photos/memory-01.jpg</span>
+        </div>
+      </div>
+      <div class="memory__content">
+        <div class="memory__meta anim-el" data-delay="0">
+          <span class="memory__season">春</span>
+          <span class="memory__date">2024年 5月</span>
+        </div>
+        <h3 class="memory__headline anim-el" data-delay="1">付き合い始めた日</h3>
+        <p class="memory__caption anim-el" data-delay="2">
+          あの日のこと、今でもはっきり覚えてる。<br>
+          最初は今みたいに2年経ってもこんなに甘え、甘えられるような関係になれると思わなかった。
+        </p>
+        <button class="memory__reveal-btn anim-el" data-delay="3" aria-expanded="false" aria-controls="reveal-2">
+          あの時、実は…
+        </button>
+        <div class="memory__reveal-panel" id="reveal-2" aria-hidden="true">
+          <p class="memory__inner-thought">
+            ずっとさやちゃんのことが気になってた。<br>
+            もっと話したいと思いながら、帰り道ずっと考えてたよ。
+          </p>
+        </div>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 3: Memory 02 ===== -->
+    <section class="slide slide--memory" data-slide="3" data-theme="ch1">
+      <div class="memory__photo" style="--photo-src: url('photos/memory-02.jpg')">
+        <div class="memory__photo-placeholder">
+          <span class="memory__photo-hint">photos/memory-02.jpg</span>
+        </div>
+      </div>
+      <div class="memory__content">
+        <div class="memory__meta anim-el" data-delay="0">
+          <span class="memory__season">夏</span>
+          <span class="memory__date">2024年 8月 11日</span>
+        </div>
+        <h3 class="memory__headline anim-el" data-delay="1">さやちゃんのお家にはじめて行った日</h3>
+        <p class="memory__caption anim-el" data-delay="2">
+          すごい緊張したけど、ご両親に挨拶できてよかった！
+        </p>
+        <button class="memory__reveal-btn anim-el" data-delay="3" aria-expanded="false" aria-controls="reveal-3">
+          あの時、実は…
+        </button>
+        <div class="memory__reveal-panel" id="reveal-3" aria-hidden="true">
+          <p class="memory__inner-thought">【あの時の本音を書いてね。】</p>
+        </div>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 4: Memory 03 ===== -->
+    <section class="slide slide--memory" data-slide="4" data-theme="ch1">
+      <div class="memory__photo" style="--photo-src: url('photos/memory-03.jpg')">
+        <div class="memory__photo-placeholder">
+          <span class="memory__photo-hint">photos/memory-03.jpg</span>
+        </div>
+      </div>
+      <div class="memory__content">
+        <div class="memory__meta anim-el" data-delay="0">
+          <span class="memory__season">秋</span>
+          <span class="memory__date">2024年 9月 29日</span>
+        </div>
+        <h3 class="memory__headline anim-el" data-delay="1">初めてさやちゃんと水族館に行った日</h3>
+        <p class="memory__caption anim-el" data-delay="2">クラゲとかすごいきれいだったね。<br>またちがういろいろな水族館もいっぱい巡っていきたいな。</p>
+        <button class="memory__reveal-btn anim-el" data-delay="3" aria-expanded="false" aria-controls="reveal-4">
+          あの時、実は…
+        </button>
+        <div class="memory__reveal-panel" id="reveal-4" aria-hidden="true">
+          <p class="memory__inner-thought">【あの時の本音を書いてね。】</p>
+        </div>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 5: Chapter II ===== -->
+    <section class="slide slide--chapter" data-slide="5" data-theme="ch2">
+      <div class="chapter__inner">
+        <span class="chapter__number anim-el" data-delay="0">Chapter II</span>
+        <h2 class="chapter__title anim-el" data-delay="1">ふたりの日々</h2>
+        <p class="chapter__sub anim-el" data-delay="2">our days together</p>
+        <div class="chapter__rule anim-el" data-delay="3"></div>
+        <p class="chapter__range anim-el" data-delay="4">2024年 秋 — 冬</p>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 6: Memory 04 ===== -->
+    <section class="slide slide--memory" data-slide="6" data-theme="ch2">
+      <div class="memory__photo" style="--photo-src: url('photos/memory-04.jpg')">
+        <div class="memory__photo-placeholder">
+          <span class="memory__photo-hint">photos/memory-04.jpg</span>
+        </div>
+      </div>
+      <div class="memory__content">
+        <div class="memory__meta anim-el" data-delay="0">
+          <span class="memory__season">冬</span>
+          <span class="memory__date">2024年 12月 24日</span>
+        </div>
+        <h3 class="memory__headline anim-el" data-delay="1">ちょっと変わったふたりのイブ</h3>
+        <p class="memory__caption anim-el" data-delay="2">
+          僕たちは、他のカップルより少し変わったイブを過ごしたね。<br>
+          山梨プチ旅行楽しかった！<br>
+          色々落ち着いたら近くの県とかにプチ旅行したいな〜
+        </p>
+        <button class="memory__reveal-btn anim-el" data-delay="3" aria-expanded="false" aria-controls="reveal-6">
+          あの時、実は…
+        </button>
+        <div class="memory__reveal-panel" id="reveal-6" aria-hidden="true">
+          <p class="memory__inner-thought">【あの時の本音を書いてね。】</p>
+        </div>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 7: Memory 05 ===== -->
+    <section class="slide slide--memory" data-slide="7" data-theme="ch2">
+      <div class="memory__photo" style="--photo-src: url('photos/memory-05.jpg')">
+        <div class="memory__photo-placeholder">
+          <span class="memory__photo-hint">photos/memory-05.jpg</span>
+        </div>
+      </div>
+      <div class="memory__content">
+        <div class="memory__meta anim-el" data-delay="0">
+          <span class="memory__season">冬</span>
+          <span class="memory__date">2025年 1月 11日</span>
+        </div>
+        <h3 class="memory__headline anim-el" data-delay="1">ふたりで迎えた、成人のお祝い</h3>
+        <p class="memory__caption anim-el" data-delay="2">
+          さやちゃんの地元の神社まで一緒に行けて、<br>
+          家族としてまた一歩近づけた気がして嬉しかった。<br>
+          着物、めちゃくちゃ似合ってたよーーーーーー！
+        </p>
+        <button class="memory__reveal-btn anim-el" data-delay="3" aria-expanded="false" aria-controls="reveal-7">
+          あの時、実は…
+        </button>
+        <div class="memory__reveal-panel" id="reveal-7" aria-hidden="true">
+          <p class="memory__inner-thought">【あの時の本音を書いてね。】</p>
+        </div>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 8: Memory 06 ===== -->
+    <section class="slide slide--memory" data-slide="8" data-theme="ch2">
+      <div class="memory__photo" style="--photo-src: url('photos/memory-06.jpg')">
+        <div class="memory__photo-placeholder">
+          <span class="memory__photo-hint">photos/memory-06.jpg</span>
+        </div>
+      </div>
+      <div class="memory__content">
+        <div class="memory__meta anim-el" data-delay="0">
+          <span class="memory__season">冬</span>
+          <span class="memory__date">2025年 1月 31日</span>
+        </div>
+        <h3 class="memory__headline anim-el" data-delay="1">ふたりのディズニーデート</h3>
+        <p class="memory__caption anim-el" data-delay="2">
+          一緒にディズニーランドに行った日。<br>
+          夢の国を満喫したあと、ジムに行ったのは<br>
+          一生忘れられない思い出になったね笑
+        </p>
+        <button class="memory__reveal-btn anim-el" data-delay="3" aria-expanded="false" aria-controls="reveal-8">
+          あの時、実は…
+        </button>
+        <div class="memory__reveal-panel" id="reveal-8" aria-hidden="true">
+          <p class="memory__inner-thought">【あの時の本音を書いてね。】</p>
+        </div>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 9: Memory 07 ===== -->
+    <section class="slide slide--memory" data-slide="9" data-theme="ch2">
+      <div class="memory__photo" style="--photo-src: url('photos/memory-07.jpg')">
+        <div class="memory__photo-placeholder">
+          <span class="memory__photo-hint">photos/memory-07.jpg</span>
+        </div>
+      </div>
+      <div class="memory__content">
+        <div class="memory__meta anim-el" data-delay="0">
+          <span class="memory__season">春</span>
+          <span class="memory__date">2025年 3月 1日</span>
+        </div>
+        <h3 class="memory__headline anim-el" data-delay="1">ふたりで走った、マラソン大会</h3>
+        <p class="memory__caption anim-el" data-delay="2">
+          絶対ほかのカップルじゃしなさそうなデートで最高。<br>
+          一緒に走れる人がいるって、それだけで特別だよ。<br>
+          結婚したら、家族マラソンに出場かな？？
+        </p>
+        <button class="memory__reveal-btn anim-el" data-delay="3" aria-expanded="false" aria-controls="reveal-9">
+          あの時、実は…
+        </button>
+        <div class="memory__reveal-panel" id="reveal-9" aria-hidden="true">
+          <p class="memory__inner-thought">【あの時の本音を書いてね。】</p>
+        </div>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 10: Memory 08 ===== -->
+    <section class="slide slide--memory" data-slide="10" data-theme="ch2">
+      <div class="memory__photo" style="--photo-src: url('photos/memory-08.jpg')">
+        <div class="memory__photo-placeholder">
+          <span class="memory__photo-hint">photos/memory-08.jpg</span>
+        </div>
+      </div>
+      <div class="memory__content">
+        <div class="memory__meta anim-el" data-delay="0">
+          <span class="memory__season">春</span>
+          <span class="memory__date">2025年 3月 30日</span>
+        </div>
+        <h3 class="memory__headline anim-el" data-delay="1">桜の下で、ふたりの春</h3>
+        <p class="memory__caption anim-el" data-delay="2">
+          花見に行った日。<br>
+          いっぱいいい写真撮れたね。<br>
+          今の僕のnoteのアイコンにもなっている、伝説の日。
+        </p>
+        <button class="memory__reveal-btn anim-el" data-delay="3" aria-expanded="false" aria-controls="reveal-10">
+          あの時、実は…
+        </button>
+        <div class="memory__reveal-panel" id="reveal-10" aria-hidden="true">
+          <p class="memory__inner-thought">【あの時の本音を書いてね。】</p>
+        </div>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 11: Chapter III ===== -->
+    <section class="slide slide--chapter" data-slide="11" data-theme="ch3">
+      <div class="chapter__inner">
+        <span class="chapter__number anim-el" data-delay="0">Chapter III</span>
+        <h2 class="chapter__title anim-el" data-delay="1">あの瞬間たちへ</h2>
+        <p class="chapter__sub anim-el" data-delay="2">to those moments</p>
+        <div class="chapter__rule anim-el" data-delay="3"></div>
+        <p class="chapter__range anim-el" data-delay="4">2025年 春 — 現在</p>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 12: Memory 09 ===== -->
+    <section class="slide slide--memory" data-slide="12" data-theme="ch3">
+      <div class="memory__photo" style="--photo-src: url('photos/memory-09.jpg')">
+        <div class="memory__photo-placeholder">
+          <span class="memory__photo-hint">photos/memory-09.jpg</span>
+        </div>
+      </div>
+      <div class="memory__content">
+        <div class="memory__meta anim-el" data-delay="0">
+          <span class="memory__season">秋</span>
+          <span class="memory__date">2025年 11月 13日</span>
+        </div>
+        <h3 class="memory__headline anim-el" data-delay="1">いつものエニタイム合トレデート</h3>
+        <p class="memory__caption anim-el" data-delay="2">
+          一緒に汗かいてトレーニングする時間が好きだよ。<br>
+          僕が休会から復帰したら、またたくさんジムデートしようね。<br>
+          まだ行ったことない店舗とかも一緒に回ろうね。
+        </p>
+        <button class="memory__reveal-btn anim-el" data-delay="3" aria-expanded="false" aria-controls="reveal-12">
+          あの時、実は…
+        </button>
+        <div class="memory__reveal-panel" id="reveal-12" aria-hidden="true">
+          <p class="memory__inner-thought">【あの時の本音を書いてね。】</p>
+        </div>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 13: Memory 10 ===== -->
+    <section class="slide slide--memory" data-slide="13" data-theme="ch3">
+      <div class="memory__photo" style="--photo-src: url('photos/memory-10.jpg')">
+        <div class="memory__photo-placeholder">
+          <span class="memory__photo-hint">photos/memory-10.jpg</span>
+        </div>
+      </div>
+      <div class="memory__content">
+        <div class="memory__meta anim-el" data-delay="0">
+          <span class="memory__season">冬</span>
+          <span class="memory__date">2025年 11月 26日</span>
+        </div>
+        <h3 class="memory__headline anim-el" data-delay="1">昭和記念公園のイルミネーション</h3>
+        <p class="memory__caption anim-el" data-delay="2">
+          立川で見たライトアップ、すごく綺麗だったね。<br>
+          ここは僕たちの中でも特別な思い入れのある場所。<br>
+          また一緒に来ようね。
+        </p>
+        <button class="memory__reveal-btn anim-el" data-delay="3" aria-expanded="false" aria-controls="reveal-13">
+          あの時、実は…
+        </button>
+        <div class="memory__reveal-panel" id="reveal-13" aria-hidden="true">
+          <p class="memory__inner-thought">【あの時の本音を書いてね。】</p>
+        </div>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 14: Memory 11 ===== -->
+    <section class="slide slide--memory" data-slide="14" data-theme="ch3">
+      <div class="memory__photo" style="--photo-src: url('photos/memory-11.jpg')">
+        <div class="memory__photo-placeholder">
+          <span class="memory__photo-hint">photos/memory-11.jpg</span>
+        </div>
+      </div>
+      <div class="memory__content">
+        <div class="memory__meta anim-el" data-delay="0">
+          <span class="memory__season">冬</span>
+          <span class="memory__date">2025年 12月 25日</span>
+        </div>
+        <h3 class="memory__headline anim-el" data-delay="1">ふたり目のクリスマスは、江ノ島で</h3>
+        <p class="memory__caption anim-el" data-delay="2">
+          イルミも綺麗だったし、夜ご飯も美味しくて最高だった！<br>
+          また、今年のクリスマスはどう過ごしてるかなぁ〜？<br>
+          楽しみだね。
+        </p>
+        <button class="memory__reveal-btn anim-el" data-delay="3" aria-expanded="false" aria-controls="reveal-14">
+          あの時、実は…
+        </button>
+        <div class="memory__reveal-panel" id="reveal-14" aria-hidden="true">
+          <p class="memory__inner-thought">【あの時の本音を書いてね。】</p>
+        </div>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 15: Memory 12 ===== -->
+    <section class="slide slide--memory" data-slide="15" data-theme="ch3">
+      <div class="memory__photo" style="--photo-src: url('photos/memory-12.jpg')">
+        <div class="memory__photo-placeholder">
+          <span class="memory__photo-hint">photos/memory-12.jpg</span>
+        </div>
+      </div>
+      <div class="memory__content">
+        <div class="memory__meta anim-el" data-delay="0">
+          <span class="memory__season">春</span>
+          <span class="memory__date">2026年 4月 6日</span>
+        </div>
+        <h3 class="memory__headline anim-el" data-delay="1">昭和記念公園、またふたりの春</h3>
+        <p class="memory__caption anim-el" data-delay="2">
+          今年も花見いったね。そのあとのダーツも楽しかった！<br>
+          さやちゃん、本当に花畑に映えるいいモデルさんだね。<br>
+          自慢の彼女だよ。
+        </p>
+        <button class="memory__reveal-btn anim-el" data-delay="3" aria-expanded="false" aria-controls="reveal-15">
+          あの時、実は…
+        </button>
+        <div class="memory__reveal-panel" id="reveal-15" aria-hidden="true">
+          <p class="memory__inner-thought">【あの時の本音を書いてね。】</p>
+        </div>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 16: Letter ===== -->
+    <section class="slide slide--letter" data-slide="16" data-theme="letter">
+      <div class="letter__inner">
+        <div class="letter__paper anim-el" data-delay="0">
+          <p class="letter__greeting">さやちゃんへ</p>
+          <div class="letter__body">
+            <p>今日で付き合って2年だね。</p>
+            <p>
+              まずは、ここまで一緒にいてくれて本当にありがとう。<br>
+              楽しい時間はもちろん、何気ない日常の中にも、<br>
+              いつもさやちゃんがいてくれるだけで安心できたり、<br>
+              頑張ろうと思えたりする瞬間がたくさんありました。
+            </p>
+            <p>
+              2年って、振り返るとあっという間だったけど、<br>
+              その中にはたくさんの思い出が詰まっていて、<br>
+              僕にとって本当に大切な時間です。
+            </p>
+            <p>
+              これから先も、嬉しいことは一緒に喜んで、<br>
+              しんどい時は支え合って、<br>
+              何でも話し合える関係でいたいです。
+            </p>
+          </div>
+          <p class="letter__future">
+            3年目も、変わらず仲良くしていこうね。<br>
+            <span class="letter__future-en">the next chapter starts now.</span>
+          </p>
+          <p class="letter__sign">
+            <span class="letter__from">大好きです。翼より</span>
+            <span class="letter__date-sign">2026年 4月</span>
+          </p>
+        </div>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== SLIDE 17: Ending ===== -->
+    <section class="slide slide--ending" data-slide="17" data-theme="ending">
+      <div class="ending__inner">
+        <p class="ending__year anim-el" data-delay="0">2024 — 2026</p>
+        <h2 class="ending__title anim-el" data-delay="1">ありがとう、さやちゃん。</h2>
+        <p class="ending__sub anim-el" data-delay="2">with love, from つばさ</p>
+        <div class="ending__rule anim-el" data-delay="3"></div>
+        <button class="ending__replay-btn anim-el" data-delay="4" id="replayBtn">もう一度見る</button>
+      </div>
+      <div class="slide__vignette" aria-hidden="true"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
