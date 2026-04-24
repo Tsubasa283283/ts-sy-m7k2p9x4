@@ -189,9 +189,6 @@
       if (target === 19) {
         if (TWEAKS.fireworks !== 'off') setTimeout(launchFireworks, 700);
       }
-      // Map reveal on memory slides
-      var mapEl = toEl.querySelector('.memory__map');
-      if (mapEl) setTimeout(function(){ mapEl.classList.add('is-active'); }, 400);
     }, 780);
   }
   function next() { goTo(currentSlide + 1, 'next'); }
@@ -248,61 +245,7 @@
     });
   }
 
-  /* ============================================================
-     MINI JAPAN MAP
-     ============================================================ */
-  var JAPAN_PATHS = [
-    // Hokkaido
-    'M305 38 Q325 30 345 38 Q360 50 352 70 Q342 85 322 88 Q302 92 293 76 Q288 60 295 48 Z',
-    // Honshu
-    'M115 152 Q132 128 165 122 Q195 118 222 133 Q248 144 272 148 Q292 150 308 158 Q320 168 320 180 Q312 190 295 186 Q275 182 255 178 Q232 174 208 172 Q182 170 160 176 Q138 180 122 174 Q110 166 115 152 Z',
-    // Shikoku
-    'M210 198 Q228 194 240 204 Q242 215 228 218 Q212 218 205 210 Q203 202 210 198 Z',
-    // Kyushu
-    'M155 200 Q175 194 186 210 Q190 230 176 240 Q158 246 148 232 Q142 215 155 200 Z'
-  ];
-
-  var PIN_COORDS = {
-    yamanashi: { x: 255, y: 162 },
-    chiba:     { x: 294, y: 155 },
-    kanagawa:  { x: 278, y: 168 },
-    tokyo:     { x: 276, y: 154 },
-    saitama:   { x: 272, y: 146 }
-  };
-
-  function initMaps() {
-    var maps = document.querySelectorAll('.memory__map');
-    maps.forEach(function(m){
-      var svg = m.querySelector('.memory__map-svg');
-      if (!svg) return;
-      JAPAN_PATHS.forEach(function(d){
-        var p = document.createElementNS('http://www.w3.org/2000/svg','path');
-        p.setAttribute('d', d);
-        p.setAttribute('class','memory__map-island');
-        svg.appendChild(p);
-      });
-      var pref = m.getAttribute('data-pref');
-      var coords = PIN_COORDS[pref];
-      if (coords) {
-        var halo = document.createElementNS('http://www.w3.org/2000/svg','circle');
-        halo.setAttribute('cx', coords.x);
-        halo.setAttribute('cy', coords.y);
-        halo.setAttribute('r', 9);
-        halo.setAttribute('class','memory__map-halo');
-        svg.appendChild(halo);
-        var pin = m.querySelector('.memory__map-pin');
-        if (pin) {
-          pin.style.left = (coords.x / 400 * 100) + '%';
-          pin.style.top  = (coords.y / 280 * 100) + '%';
-        }
-        var label = m.querySelector('.memory__map-label');
-        if (label) {
-          label.style.left = (coords.x / 400 * 100) + '%';
-          label.style.top  = (coords.y / 280 * 100) + '%';
-        }
-      }
-    });
-  }
+  function initMaps() {}
 
   /* ============================================================
      ENVELOPE (Opening)
