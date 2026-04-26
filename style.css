@@ -1189,6 +1189,45 @@ body.theme-ch3-sakura .slide--memory {
   letter-spacing: 0.04em;
 }
 
+/* Postbox reveal */
+.finale__postbox {
+  margin-top: 40px;
+  padding: 24px 28px;
+  border: 1px solid rgba(212,175,90,0.25);
+  border-radius: 4px;
+  background: rgba(255,255,255,0.04);
+  text-align: center;
+  backdrop-filter: blur(4px);
+  animation: postboxPulse 2.5s ease-in-out infinite;
+}
+@keyframes postboxPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212,175,90,0); }
+  50%       { box-shadow: 0 0 0 8px rgba(212,175,90,0.12); }
+}
+.finale__postbox-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+  animation: postboxBounce 1.8s ease-in-out infinite;
+}
+@keyframes postboxBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+.finale__postbox-text {
+  font-family: var(--f-serif);
+  font-size: 13px;
+  color: rgba(251,244,230,0.6);
+  margin-bottom: 10px;
+  letter-spacing: 0.08em;
+}
+.finale__postbox-hint {
+  font-family: var(--f-serif);
+  font-size: clamp(16px, 3vw, 20px);
+  color: var(--gold-soft);
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+}
+
 /* ============================================================
    Tweaks panel
    ============================================================ */
