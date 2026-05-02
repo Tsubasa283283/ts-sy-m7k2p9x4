@@ -75,6 +75,13 @@
 
     // Opening hint bobbing handled by CSS
     window.postMessage({slideIndexChanged: 0}, '*');
+
+    // 初期ロード完了後にトランジション制限を解除（2フレーム待つ）
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        document.body.classList.remove('is-loading');
+      });
+    });
   }
 
   /* ============================================================
