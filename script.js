@@ -59,6 +59,9 @@
     updateArrows();
     updateCount(0);
     checkAllPhotos();
+
+    // 最初のスライドのコンテンツアニメーションを起動
+    setTimeout(function() { animateSlideContent(slides[0]); }, 120);
     initMaps();
 
     // Particles + cursor + fx
