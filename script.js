@@ -30,14 +30,15 @@
   var totalSlides = 0;
   var dotsContainer, dots = [], prevBtn, nextBtn, grainEl;
 
-  var chapterSlides = [3, 7, 13];
+  var chapterSlides = [4, 8, 14];
 
   var themeMap = {
-    0:'theme-opening', 1:'theme-counter', 2:'theme-prologue',
-    3:'theme-ch1', 4:'theme-ch1', 5:'theme-ch1', 6:'theme-ch1',
-    7:'theme-ch2', 8:'theme-ch2', 9:'theme-ch2', 10:'theme-ch2', 11:'theme-ch2', 12:'theme-ch2-sakura',
-    13:'theme-ch3', 14:'theme-ch3', 15:'theme-ch3-lights', 16:'theme-ch3-snow', 17:'theme-ch3-sakura',
-    18:'theme-letter', 19:'theme-finale'
+    0:'theme-opening',
+    1:'theme-opening', 2:'theme-counter', 3:'theme-prologue',
+    4:'theme-ch1', 5:'theme-ch1', 6:'theme-ch1', 7:'theme-ch1',
+    8:'theme-ch2', 9:'theme-ch2', 10:'theme-ch2', 11:'theme-ch2', 12:'theme-ch2', 13:'theme-ch2-sakura',
+    14:'theme-ch3', 15:'theme-ch3', 16:'theme-ch3-lights', 17:'theme-ch3-snow', 18:'theme-ch3-sakura',
+    19:'theme-letter', 20:'theme-finale'
   };
   var allThemes = ['theme-opening','theme-counter','theme-prologue','theme-ch1','theme-ch2','theme-ch2-sakura','theme-ch3','theme-ch3-lights','theme-ch3-snow','theme-ch3-sakura','theme-letter','theme-finale'];
 
@@ -184,9 +185,9 @@
       animateSlideContent(toEl);
 
       // Slide-specific triggers
-      if (target === 1) startCounter();
-      if (target === 18) startLetterTyping();
-      if (target === 19) {
+      if (target === 2) startCounter();
+      if (target === 19) startLetterTyping();
+      if (target === 20) {
         if (TWEAKS.fireworks !== 'off') setTimeout(launchFireworks, 700);
       }
     }, 780);
@@ -863,6 +864,8 @@
      EVENTS
      ============================================================ */
   function bindEvents() {
+    var detectiveNextBtn = document.getElementById('detectiveNextBtn');
+    if (detectiveNextBtn) detectiveNextBtn.addEventListener('click', next);
     var startBtn = document.getElementById('startBtn');
     var replayBtn = document.getElementById('replayBtn');
     if (startBtn) startBtn.addEventListener('click', next);

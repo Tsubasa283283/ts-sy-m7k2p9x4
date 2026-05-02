@@ -66,8 +66,31 @@
 
   <main class="slides-container" id="slidesContainer">
 
-    <!-- ===== 0: Opening — envelope ===== -->
-    <section class="slide slide--opening is-active" data-slide="0" data-theme="opening" data-screen-label="01 Opening">
+    <!-- ===== 0: Detective Welcome ===== -->
+    <section class="slide slide--detective is-active" data-slide="0" data-theme="opening" data-screen-label="00 Detective">
+      <div class="detective__inner">
+        <p class="detective__kicker anim-el" data-delay="0">— Case Closed —</p>
+        <div class="detective__badge anim-el" data-delay="1">🔍</div>
+        <h1 class="detective__title anim-el" data-delay="2">
+          よくここまで<br>たどり着きましたね、<br>名探偵さん。
+        </h1>
+        <p class="detective__body anim-el" data-delay="3">
+          すべての謎を解いたあなたへ、<br>
+          特別なごほうびを用意しました。
+        </p>
+        <div class="detective__rule anim-el" data-delay="4"></div>
+        <p class="detective__hint anim-el" data-delay="5">
+          さあ、次のページへ。
+        </p>
+        <button class="detective__cta anim-el" data-delay="6" id="detectiveNextBtn">
+          <span>開けてみる</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== 1: Opening — envelope ===== -->
+    <section class="slide slide--opening" data-slide="1" data-theme="opening" data-screen-label="01 Opening">
       <div class="opening__stage">
         <div class="envelope" id="envelope">
           <div class="envelope__back"></div>
